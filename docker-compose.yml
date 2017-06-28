@@ -1,0 +1,11 @@
+version: '3'
+services:
+  pedro-ruby:
+    image: peterlollo/docker-bub
+    build: .
+    ports:
+    - "4567:4567"
+    volumes:
+    - .:/app
+  pedro-redis:
+    image: redis
